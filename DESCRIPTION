@@ -1,0 +1,14 @@
+Package: UniMINstar
+Type: Package
+Title: UniMIN* Test
+Version: 0.1.0
+Author: Subha Halder <sb.halder123456@gmail.com>
+Maintainer: Subha Halder <sb.halder123456@gmail.com>
+Imports: Iso, stats
+Description: This package provides a solution for testing the equality of means versus umbrella-ordered alternatives with unknown peak in one-way ANOVA. Hypothesis testing of null hypothesis H_0: mu_1 = mu_2 = ... = mu_k against the alternative hypothesis H_1:mu_1 <=.....<= mu_(h-1)<= mu_h >= mu_(h+1)>=....>= mu_k (at least one strict inequality, h is unknown) performed. The input comprises two variables: sample_data and significance_level. The output comprises the peak of the umbrella, the critical value, the UniMIN* test statistic value, and the outcome, which signifies whether to accept or reject the null hypothesis.  If the value of the test statistic exceeds the critical value, we will reject the null hypothesis; otherwise, we will not reject it.
+Usage: UniMINstar(sample_data, significance_level)
+Arguments: The data should be structured as a list, namely in the format list(a, b, c, ...), where (a, b, c, ...) represent data vectors of different normal independent treatments. The significance level (e.g., 0.05, 0.01) refers to the set threshold of significance for this test. 
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.1
