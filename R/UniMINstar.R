@@ -88,7 +88,7 @@ UniMINstar <- function(sample_data, significance_level){
         new_mu0 <- unimodal(X = sapply(sample_data_list, mean), w = w0, lmode = p)
         new_var0 <- sapply(1:length(sample_data_list), function(i) sum((sample_data_list[[i]] - new_mu0[i])^2) / n[i])
         new_w0 <- n / new_var0
-        if (max(abs(new_mu0 - mu0)) <= 0.000001) {
+        if (max(abs(new_mu0 - mu0)) <= 0.0000001) {
           break  # Exit the loop if the difference is less than epsilon
         }
         w0 <- new_w0
