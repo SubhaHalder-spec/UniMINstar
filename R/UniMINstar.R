@@ -189,8 +189,9 @@ UniMINstar <- function(sample_data, significance_level){
   } else {
     result <- "Do not reject null hypothesis"
   }
-  return(paste( "Peak:", peak2, "; Critical value:", quantile_value, "; UniMIN* Test statistic:", UMIN, "; Result:", result))
+  return(paste( "Peak:", peak2, "; Critical value:", quantile_value, "; UniMIN Test statistic:", UMIN, "; Result:", result))
 }
+
 
 
 
