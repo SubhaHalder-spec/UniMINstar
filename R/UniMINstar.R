@@ -101,7 +101,7 @@ UniMINstar <- function(sample_data, significance_level){
     return(which.min(res))
   }
   sample_data <- lapply(sample_data, function(x) x[!is.na(x)])
-  num_samples = 20000
+  num_samples = 100000
   num_datasets <- length(sample_data)
   n <- sapply(sample_data, length)
   peak1 <- unimod_peak(sample_data)
@@ -191,4 +191,5 @@ UniMINstar <- function(sample_data, significance_level){
   }
   return(paste( "Peak:", peak2, "; Critical value:", quantile_value, "; UniMIN* Test statistic:", UMIN, "; Result:", result))
 }
+
 
